@@ -16,10 +16,12 @@ def shift(letter, shift)
       letter = "a"
       next
     end
-    if letter == " " || letter = "!" || letter == "," || letter == "."
+    if letter == " " || letter == "!" || letter == "," || letter == "."
       next
     end
     letter = (letter.ord + 1).chr 
   end
   return letter
 end
+
+caesar_cipher("Zimbabwe", 5)
