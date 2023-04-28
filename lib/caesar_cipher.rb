@@ -5,3 +5,21 @@ def caesar_cipher(message, shift)
   end
   puts encryption.join("")
 end
+
+def shift(letter, shift)
+  shift.times do
+    if letter == "Z"
+      letter = "A"
+      next
+    end
+    if letter == "z"
+      letter = "a"
+      next
+    end
+    if letter == " " || letter = "!" || letter == "," || letter == "."
+      next
+    end
+    letter = (letter.ord + 1).chr 
+  end
+  return letter
+end
