@@ -8,4 +8,8 @@ describe "#caesar_cipher" do
   it "does not affect punctuation" do 
     expect(caesar_cipher("AB.CD.EF", 1)).to eql("BC.DE.FG")
   end
+
+  it "returns the same message if shifted 26 times" do 
+    expect(caesar_cipher("abcde", 26)).to eql("abcde")
+  end
 end
