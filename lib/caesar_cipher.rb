@@ -3,7 +3,7 @@ def caesar_cipher(message, shift)
   encryption = message_array.each_with_index do |letter, index|
     message_array[index] = shift(letter, shift)
   end
-  puts encryption.join("")
+  return encryption.join("")
 end
 
 def shift(letter, shift)
@@ -23,5 +23,3 @@ def shift(letter, shift)
   end
   return letter
 end
-
-caesar_cipher("Zimbabwe", 5)
